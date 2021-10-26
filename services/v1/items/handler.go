@@ -65,6 +65,11 @@ func UpdateHandler(c *gin.Context) {
 	name := c.PostForm("name")
 	taxes_id := c.PostFormArray("taxes")
 
+	if len(taxes_id) < 2 {
+		utils.ShowErr(c, http.StatusBadRequest, "Items are required to have at least 2 taxes", nil)
+		return
+	}
+
 	if name == "" {
 		utils.ShowErr(c, http.StatusBadRequest, "Item name is required", nil)
 		return
