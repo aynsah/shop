@@ -1,0 +1,20 @@
+26-10-2021 6:16:38 => /api/v1/items/store
+500 => could not save the data
+Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSERT INTO items (item_id, tax_id) VALUES (?, ?)' at line 1
+
+26-10-2021 6:22:31 => /api/v1/items/store
+500 => could not save the data
+Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSERT INTO items (item_id, tax_id) VALUES (?, ?)' at line 1
+
+26-10-2021 6:23:13 => /api/v1/items/store
+500 => could not save the data
+Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSERT INTO items (item_id, tax_id) VALUES (?, ?)' at line 1
+
+26-10-2021 6:26:34 => /api/v1/items/store
+500 => could not save the data
+Error 1054: Unknown column 'item_id' in 'field list'
+
+26-10-2021 6:58:42 => /api/v1/items/:id/delete
+500 => could not delete the data
+Error 1451: Cannot delete or update a parent row: a foreign key constraint fails (`shop`.`items_taxes`, CONSTRAINT `items_taxes_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`))
+
