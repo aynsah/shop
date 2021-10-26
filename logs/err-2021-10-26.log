@@ -18,3 +18,15 @@ Error 1054: Unknown column 'item_id' in 'field list'
 500 => could not delete the data
 Error 1451: Cannot delete or update a parent row: a foreign key constraint fails (`shop`.`items_taxes`, CONSTRAINT `items_taxes_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`))
 
+26-10-2021 8:46:45 => /api/v1/items/
+500 => could not retrieve data
+sql: Scan error on column index 2, name "id": converting NULL to int is unsupported
+
+26-10-2021 9:54:7 => /api/v1/items/store
+500 => could not save the data
+Error 1452: Cannot add or update a child row: a foreign key constraint fails (`shop`.`items_taxes`, CONSTRAINT `items_taxes_ibfk_2` FOREIGN KEY (`tax_id`) REFERENCES `taxes` (`id`))
+
+26-10-2021 9:54:7 => /api/v1/items/:id/update
+500 => could not update the data
+Error 1452: Cannot add or update a child row: a foreign key constraint fails (`shop`.`items_taxes`, CONSTRAINT `items_taxes_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`))
+
